@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purple_gradient"
+    android:padding="16dp"
+    tools:context=".SetBudgetActivity">
+
+    <!-- Spinner for Month -->
+    <Spinner
+        android:id="@+id/spinner_month"
+        android:layout_width="381dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:background="#DEF2DC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Spinner for Year -->
+    <Spinner
+        android:id="@+id/spinner_year"
+        android:layout_width="379dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:background="#DEF2DC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_month" />
+
+    <!-- EditText for Amount -->
+    <EditText
+        android:id="@+id/edit_text_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#AAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/spinner_year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- EditText for Category (replacing the Spinner) -->
+    <EditText
+        android:id="@+id/edtCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Category"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#ffff"
+        android:textColorHint="#AAAAAA"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- EditText for Description -->
+    <EditText
+        android:id="@+id/edit_text_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:padding="8dp"
+        android:textColor="#ffff"
+        android:textColorHint="#AAAAAA"
+        app:layout_constraintTop_toBottomOf="@id/edtCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Image Icons Row 1 (Transportation, Food, Utilities) -->
+    <LinearLayout
+        android:id="@+id/iconContainerRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_description">
+
+        <ImageView
+            android:id="@+id/icon_transport"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:contentDescription="Transportation Icon"
+            android:padding="8dp"
+            android:src="@drawable/transport" />
+
+        <ImageView
+            android:id="@+id/icon_food"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="Food Icon"
+            android:padding="8dp"
+            android:src="@drawable/food" />
+
+        <ImageView
+            android:id="@+id/icon_utilities"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/utilities"
+            android:contentDescription="Utilities Icon"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Image Icons Row 2 (Entertainment, Healthcare, Other) -->
+    <LinearLayout
+        android:id="@+id/iconContainerRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/iconContainerRow1">
+
+        <ImageView
+            android:id="@+id/icon_entertainment"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/entertainment"
+            android:contentDescription="Entertainment Icon"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/icon_healthcare"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/healthcare"
+            android:contentDescription="Healthcare Icon"
+            android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/icon_other"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:src="@drawable/other"
+            android:contentDescription="Other Icon"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <!-- Set Budget Button -->
+    <Button
+        android:id="@+id/btn_set_budget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button"
+        android:text="Set Budget"
+        android:textColor="#1E1E1E"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconContainerRow2" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="63dp"
+        android:background="@drawable/rounded_button"
+        android:text="Back"
+        android:textColor="#1E1E1E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_set_budget" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1E1E1E">
+
+    <!-- TextView to display the category -->
+    <TextView
+        android:id="@+id/transactionCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category: "
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"/>
+
+    <!-- TextView to display the amount -->
+    <TextView
+        android:id="@+id/transactionAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount: "
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"/>
+
+    <!-- TextView to display the transaction date -->
+    <TextView
+        android:id="@+id/transactionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"/>
+
+    <!-- TextView to display the description -->
+    <TextView
+        android:id="@+id/transactionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description: "
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#AAAAAA"/>
+
+</LinearLayout>

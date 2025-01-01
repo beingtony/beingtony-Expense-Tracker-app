@@ -1,0 +1,117 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context=".HomeActivity">
+
+    <!-- Subtitle (Centered at the top) -->
+
+    <!-- Logout Button (Top Right) -->
+
+    <ImageView
+        android:id="@+id/icon_healthcare"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="247dp"
+        android:layout_weight="1"
+        android:contentDescription="Healthcare Icon"
+        android:padding="8dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintBottom_toTopOf="@+id/btnViewExpenses"
+        app:layout_constraintEnd_toStartOf="@+id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="TRACKIFY"
+        android:textColor="#DEF2DC"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.234"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGOUT"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F44336"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Transaction History Button -->
+
+    <!-- Add Expense Button -->
+    <Button
+        android:id="@+id/btnViewExpenses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="260dp"
+        android:backgroundTint="#2196F3"
+        android:text="Transaction History"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <Button
+        android:id="@+id/btnAddExpense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Expense"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnViewExpenses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Set Budget Button -->
+    <Button
+        android:id="@+id/btnSetBudget"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Set Budget"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:backgroundTint="#9C27B0"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddExpense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- View Expense Report Button -->
+    <Button
+        android:id="@+id/btnExpenseReport"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="View Expense Report"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:backgroundTint="#FF9800"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSetBudget"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

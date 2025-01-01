@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.INTERNET"
+        tools:ignore="WrongManifestParent" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Trial"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SignUpActivity"
+            android:label="Sign Up"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <!-- Home Activity -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="HomeActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <!-- Transaction History Activity -->
+        <activity
+            android:name=".TransactionHistoryActivity"
+            android:label="Transaction History"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <!-- Add Expense Activity -->
+        <activity
+            android:name=".AddExpenseActivity"
+            android:label="Add Expense"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <activity android:name=".SetBudgetActivity"
+            android:label="Set Budget"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+        <!-- Add ExpenseReportActivity here -->
+        <activity
+            android:name=".ExpenseReportActivity"
+            android:label="Expense Report"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+
+        <!-- Activity to view budget details for each month -->
+<!--        //<activity android:name=".ViewBudgetDetailsActivity" />-->
+    </application>
+
+</manifest>
